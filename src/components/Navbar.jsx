@@ -14,6 +14,15 @@ const Navbar = () => {
     navigate(`/search?q=${search}`);
   };
 
+  const links = document.querySelectorAll('#menu a');
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      const cb_menu = document.querySelector('#cb_menu');
+      cb_menu.checked = false;
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
+  });
+
   return (
     <div className="navbar">
       <div>

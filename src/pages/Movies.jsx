@@ -17,7 +17,6 @@ const Movies = () => {
     const json = await res.json();
     const conct = seriesTV.concat(json.results);
     setSeriesTV(conct);
-    console.log(conct);
   };
 
   document.title = 'Filmes em MoviesFlix - Pedro Salazar';
@@ -55,7 +54,11 @@ const Movies = () => {
             <CardFull
               id={item.id}
               name={item.title}
-              poster_path={item.poster_path}
+              poster_path={
+                item.poster_path === null
+                  ? item.backdrop_path
+                  : item.poster_path
+              }
               overview={item.overview}
               type="movie"
             />

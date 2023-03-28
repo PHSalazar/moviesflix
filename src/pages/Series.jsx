@@ -54,7 +54,11 @@ const Series = () => {
             <CardFull
               id={item.id}
               name={item.name}
-              poster_path={item.poster_path}
+              poster_path={
+                item.poster_path === null
+                  ? item.backdrop_path
+                  : item.poster_path
+              }
               overview={item.overview}
               type="serie"
             />

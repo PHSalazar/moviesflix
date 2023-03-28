@@ -76,7 +76,11 @@ const Search = () => {
                 id={movie.id}
                 name={movie.title}
                 overview={movie.overview}
-                poster_path={movie.poster_path}
+                poster_path={
+                  movie.poster_path === null
+                    ? movie.backdrop_path
+                    : movie.poster_path
+                }
                 vote_average={movie.vote_average}
                 type="movie"
               />
@@ -86,7 +90,11 @@ const Search = () => {
                 id={serie.id}
                 name={serie.name}
                 overview={serie.overview}
-                poster_path={serie.poster_path}
+                poster_path={
+                  serie.poster_path === null
+                    ? serie.backdrop_path
+                    : serie.poster_path
+                }
                 vote_average={serie.vote_average}
                 type="serie"
               />

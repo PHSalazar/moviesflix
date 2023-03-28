@@ -61,11 +61,27 @@ const MovieDetails = () => {
     }
   }, []);
 
+  //Verificando imagem Thumb/Poster, se for nulo, obter imagem de poster.
+  let imageThumb =
+    movieDetails.backdrop_path === null
+      ? movieDetails.poster_path
+      : movieDetails.backdrop_path;
+
+  useEffect(() => {
+    //Alterando título da página agregando nome do filme
+    if (typeof movieDetails.title != null || typeof movieDetails.name != null) {
+      type === 'movie'
+        ? (document.title =
+            movieDetails.title + ' - MoviesFlix - Pedro Salazar')
+        : (document.title =
+            movieDetails.name + ' - MoviesFlix - Pedro Salazar');
+    }
+  }, [movieDetails]);
   return (
     <div
       className="detailsPage"
       style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path})`,
+        backgroundImage: `url(https://image.tmdb.org/t/p/w500${imageThumb})`,
       }}
     >
       <div className="detailsInfo">

@@ -49,15 +49,19 @@ const PopularMovies = () => {
         </div>
         <div className="container">
           {popularMovies.length === 0 && <p>Carrendo lista de Populares</p>}
-          {popularMovies.length > 0 &&
-            popularMovies.map((item) => (
-              <CardMovie
-                key={item.id}
-                title={item.title}
-                id={item.id}
-                thumb={item.backdrop_path}
-              />
-            ))}
+          {popularMovies.map((item) => (
+            <CardMovie
+              key={item.id}
+              title={item.title}
+              id={item.id}
+              thumb={
+                item.backdrop_path === null ||
+                typeof item.backdrop_path === undefined
+                  ? item.poster_path
+                  : item.backdrop_path
+              }
+            />
+          ))}
         </div>
 
         <div id="arrow-right-section" onClick={() => navCarousel('next')}>

@@ -33,7 +33,10 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    getMovies(`${apiUrl}top_rated?${apiKey}&language=pt-BR`);
+    const randomNumberPage = parseInt(Math.random() * 500); //500 é o limite da pagina na API; API não permite maior do que isso.
+    getMovies(
+      `${apiUrl}top_rated?${apiKey}&language=pt-BR&page=${randomNumberPage}`,
+    );
   }, []);
 
   return (
@@ -53,8 +56,16 @@ const Home = () => {
           Carregando ...
         </p>
       )}
-      {movies.length > 0 && <MainView movies={movies} />}
-      {movies.length > 0 && <BodyHome movies={movies} />}
+      {movies.length > 0 && typeof movies != null ? (
+        <MainView movies={movies} />
+      ) : (
+        ''
+      )}
+      {movies.length > 0 && typeof movies != null ? (
+        <BodyHome movies={movies} />
+      ) : (
+        ''
+      )}
       <Footer />
     </div>
   );
