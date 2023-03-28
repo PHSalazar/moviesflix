@@ -1,0 +1,37 @@
+.card-movie {
+  width: 200px;
+  height: 113px;
+  background-size: cover;
+  cursor: pointer;
+  transition: .5s;
+  display: flex;
+  align-items: flex-end;
+  transition: .3s;
+  float: left;
+}
+
+.card-movie:hover {
+  transform: scale(1.2);
+}
+
+.cardMoview-titlte {
+  background: rgba(0, 0, 0, .7);
+  width: 100%;
+  padding: 10px 3px;
+  transition: .5s;
+}
+
+.card-movie:hover>.cardMoview-titlte {
+  height: 113px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-movie>.cardMoview-titlte:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+.result-label {
+  color: #ef0814;
+}
+
+.typeContainer {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#typeSearch {
+  padding: 5px;
+  width: 200px;
+  background: #141414;
+  border-radius: 10px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}

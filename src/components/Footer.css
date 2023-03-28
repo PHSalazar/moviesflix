@@ -1,0 +1,50 @@
+.footer {
+  background-color: rgba(109, 109, 110, 0.35);
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 5px 0 5px;
+  font-size: .8rem;
+  padding-bottom: 20px;
+}
+
+.footer>p:first-child {
+  text-align: center;
+  color: rgba(109, 109, 110, 0.8);
+}
+
+.footer>p:first-child>b {
+  color: rgba(109, 109, 110, 0.99);
+}
+
+.footer h4 {
+  color: rgba(109, 109, 110, 1);
+}
+
+.footer div:first-child p {
+  color: rgba(109, 109, 110, 0.99);
+}
+
+.footer .menu {
+  text-align: center;
+}
+
+.footer .menu li {
+  list-style: none;
+}
+
+.footer .menu li a {
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.footer .menu li a:hover {
+  color: rgba(109, 109, 110, 0.99);
+
+}
+
+.footer>div {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  padding-top: 20px;
+}

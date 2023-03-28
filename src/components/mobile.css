@@ -1,0 +1,91 @@
+@media (max-width: 600px) {
+  .navbar {}
+
+  .navbar #menu {
+    background-color: rgb(226, 226, 226);
+    position: absolute;
+    right: 5px;
+    top: 70px;
+    width: 80%;
+    min-height: 100px;
+    display: none;
+  }
+
+  .navbar #menu li a {
+    display: block;
+    color: #141414;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 10px 5px;
+  }
+
+  .navbar a[data-prop=about] {
+    display: none;
+  }
+
+  .navbar #menu a[data-prop=about] {
+    display: block;
+  }
+
+  .div-search {
+    display: none;
+  }
+
+  label[for=cb_menu] {
+    color: #e5e5e5;
+    display: block;
+  }
+
+  #cb_menu {
+    display: none;
+  }
+
+
+  #cb_menu:checked~#menu {
+    display: block;
+  }
+
+  .footer>div {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .mainView {
+    padding: 0 !important;
+    background-position-x: center !important;
+  }
+
+  .infoMainView {
+    width: 100% !important;
+    margin: 0;
+
+  }
+
+  .infoMainView>p.tagline {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  /* Details */
+
+  div.detailsPage {
+    flex-direction: column;
+    background-position: center top;
+    background-size: auto;
+  }
+
+  div.detailsInfo {
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 1) 80%);
+    width: 100%;
+    margin-top: 280px;
+    padding: 10px;
+  }
+
+  p#overview {
+    overflow: initial;
+  }
+}
